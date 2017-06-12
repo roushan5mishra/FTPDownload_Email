@@ -8,10 +8,10 @@ from email.mime.text import MIMEText
 def SendMail():
     msg = MIMEText("Pre-released .mot files has been synchronized!")
     msg['Subject'] = 'Pre-Release Sync Schedule'
-    me = 'prerelease@texe.com'
-    you = 'rmishra@texe.com'
+    me = 'prerelease@xx.com'
+    you = 'rmishraxx.com'
 
-    server = "HAWK-SVR2.texe.com"
+    server = "HAWK-SVR2."
     port=25
 
 
@@ -88,12 +88,12 @@ def downloadFirmware(files, ddir):
 def main():
     global ftp
 
-    projects = {'Elite-12': 'P0102', 'Elite-24':'P0037', 'Elite-48':'P0038', 'Elite-88':'P0039', 'Elite-168':'P0040', 'Elite-640':'P0041'}
+    projects = {''}
 
-    host = '10.60.1.20'
+    host = '10.60.1'
     port = 21
-    userName = 'rnduser'
-    paswd = 'unicornhousebucket'
+    userName = ''
+    paswd = ''
 
     ftp = FTP()
     print 'Connecting to '+host
@@ -105,7 +105,7 @@ def main():
 
     for key in projects:
         print "opening "+key+' project'
-        downloadDir = "D:\\Pre-Released Mot Files\\Elite\\Elite V4\\"
+        downloadDir = "D:\\Pre-\\"
         if not os.path.exists(downloadDir):
             os.makedirs(downloadDir)
         
